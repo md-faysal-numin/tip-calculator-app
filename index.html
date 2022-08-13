@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/app/style.css">
+  <title>Tip calculator app</title>
+</head>
+
+<body>
+  <h1 class="main-title">spli<br>tter</h1>
+  <div class="container">
+
+    <div class="calc-section">
+      <div class="bill-section">
+        <h3>Bill</h3>
+        <div class="bill-input input-custom">
+          <label for="bill">$</label>
+          <input type="text" placeholder="0"  id="bill">
+        </div>
+      </div>
+
+      <div class="tip-section">
+        <h3>Select Tip %</h3>
+        <div class="tip-option">
+          <a href="#" class="tip-btn btn-hover" data-per="5">5%</a>
+          <a href="#" class="tip-btn btn-hover" data-per="10">10%</a>
+          <a href="#" class="tip-btn btn-hover" data-per="15">15%</a>
+          <a href="#" class="tip-btn btn-hover" data-per="20">20%</a>
+            <a href="#" class="tip-btn btn-hover" data-per="25">25%</a>
+            <input type="text" id="tip-input" placeholder="Custom">
+        </div>
+      </div>
+      <div class="member-section">
+        <h3>Number of People</h3>
+        <div class="member-input input-custom">
+          <span class="member-warning"></span>
+          <label for="member"><i class="fa fa-user" aria-hidden="true"></i></label>
+          <input type="text" placeholder="0"  id="member" >
+        </div>
+    </div>
+    </div>
+    <div class="result-section">
+      <div class="tip-calc-section flex">
+        <h3>Tip Amount<br><small>/ person</small></h3>
+        <h1 id="tip">$0.00</h1>
+      </div>
+      <div class="total-section flex">
+        <h3>Total<br><small>/ person</small></h3>
+        <h1 id="total">$0.00</h1>
+      </div>
+
+      <button class="reset-btn btn-hover">RESET</button>
+    </div>
+  </div>
+  <script src="./app/script.js"></script>
+</body>
+
+</html>

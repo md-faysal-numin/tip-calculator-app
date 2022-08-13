@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+:root{
+    --strongCyan: hsl(172, 67%, 45%);
+    --veryDarkCyan: hsl(183, 100%, 15%);;
+--darkGrayishCyan: hsl(186, 14%, 43%);
+--GrayishCyan: hsl(184, 14%, 56%);
+--LightGrayishCyan: hsl(185, 41%, 84%);
+--veryLightGrayishCyan: hsl(189, 41%, 97%);
+--white: hsl(0, 0%, 100%);
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Space Mono', monospace; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--LightGrayishCyan);
+    font-weight: 700;
+    height: 100vh;
+
+}
+label{
+    font-size: 1.5rem;
+    color:var(--LightGrayishCyan) ;
+}
+h3{
+    margin: 0;
+    color: var(--GrayishCyan);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+
+    /* color: black; */
+}
+input{
+    font-size: 24px;
+    color: var(--veryDarkCyan);
+}
+.main-title{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--veryDarkCyan);
+}
+
+.container{
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    padding: 2.5rem;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* max-width:800px ; */
+}
+
+.calc-section{
+    width: 48%;
+   
+    /* outline: 1px solid red; */
+}
+.bill-section{
+    margin-bottom: 2rem;
+    /* cursor: pointer; */
+}
+
+
+#bill{
+    /* max-width: 100%; */
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    flex-grow: 1;
+}
+#bill:focus{
+    outline: 0;
+}
+.tip-section{
+    margin-bottom: 2rem;
+}
+.tip-option{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.tip-btn{
+    width: 100px;
+    color: white;
+    background-color: var(--veryDarkCyan);
+    text-align: center;
+    padding: 0.5rem 2.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-hover:hover{
+    color: var(--veryDarkCyan);
+    background-color: hsl(173, 67%, 83%);
+}
+#tip-input{
+    background-color: var(--veryLightGrayishCyan);
+    width: 100px;
+    border: none;
+    text-align: right;
+    cursor: pointer;
+    
+}
+#tip-input:hover{
+    outline: 2px solid var(--strongCyan);
+}
+#tip-input::placeholder{
+    color: var(--darkGrayishCyan);
+    text-align: center;
+    opacity: 1;
+}
+#tip-input:focus{
+    outline: 0;
+}
+
+.member-input{
+    position: relative;
+}
+.member-input input{
+    flex-grow: 1;
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+.member-input input:focus{
+    outline: 0;
+}
+
+.member-warning{
+    color: red;
+    position: absolute;
+    font-size: 12px;
+    right: 0;
+    top: -26px;
+}
+.input-custom{
+    background-color: var(--veryLightGrayishCyan);
+    padding: 0.5rem 0.7rem;
+    /* outline: 1px solid red; */
+    display: flex;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.input-custom:hover{
+    outline: 2px solid var(--strongCyan);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* result section */
+
+.result-section{
+    background-color: var(--veryDarkCyan);
+    width: 48%;
+    border-radius: 10px;
+    padding: 2rem;
+    /* flex-grow: 1; */
+    position: relative;
+    overflow: hidden;
+}
+.result-section h3{
+    
+    color: var(--veryLightGrayishCyan);
+    margin: 0;
+}
+.result-section small{
+    color: var(--GrayishCyan);
+
+    font-size: 12px;
+}
+.result-section h1{
+    /* font-size: 24px; */
+    font-size: 2.8rem;
+    color: var(--strongCyan);
+    font-weight: 700;
+    margin: 0;
+}
+
+.reset-btn{
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+    border: none;
+    width: 100%;
+    display: block;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    /* font-weight: 500; */
+    font-size: 1rem;
+    border-radius: 5px;
+    /* margin-top: auto; */
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    margin-top: 5rem;
+}
+.reset-btn:focus{
+    background-color: var(--darkGrayishCyan);
+}
+
+
+@media(max-width:700px) {
+   .container{
+    flex-direction: column;
+    justify-content: center;
+    /* width: 400px; */
+   }
+   .calc-section,
+   .result-section{
+    width: 100%;
+   }
+
+.member-section{
+    margin-bottom: 2rem;
+}
+.result-section > div{
+    margin-bottom: 1rem;
+}
+.result-section h1{
+    font-size: 2rem;
+}
+   .reset-btn{
+    margin: 0;
+   }
+}
